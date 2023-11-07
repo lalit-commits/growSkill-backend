@@ -6,8 +6,10 @@
 - [Features](#features)
 - [Repository Structure](#repository-structure)
 - [API Endpoints](#api-endpoints)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
+- [🚀 Getting Started](#-getting-started)
+    - [🔧 Installation](#-installation)
+    - [🤖 Running growSkill-backend](#-running-growSkill-backend)
+    - [🧪 Tests](#-tests)
 
 ## Overview
 
@@ -131,6 +133,40 @@ growSkill-backend/
   - **Usage**: Fetch information about the currently authenticated customer using the access token.
 
 Please follow the usage instructions and provide the required information when making requests to these endpoints.
+
+
+## 🚀 Getting Started
+
+
+### 🔧 Installation
+
+1. Clone the growSkill-backend repository:
+```sh
+git clone https://github.com/lalit-commits/growSkill-backend
+```
+
+2. Change to the project directory:
+```sh
+cd growSkill-backend
+```
+
+3. Install the dependencies:
+```sh
+npm install
+```
+
+### 🤖 Running growSkill-backend
+
+```sh
+node app.js
+```
+
+### 🧪 Tests
+```sh
+npm test
+```
+
+---
 
 
 
