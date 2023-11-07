@@ -1,87 +1,44 @@
-## 📖 Table of Contents
+# GROWSKILL-BACKEND
 
-- [📖 Table of Contents](#-table-of-contents)
-- [📍 Overview](#-overview)
-- [📦 Features](#-features)
-- [🛡️ Roles and Functionalities](#-roles-and-functionalities)
-  - [Instructor](#instructor)
-  - [Course](#course)
-  - [Customer](#customer)
-- [📂 Repository Structure](#-repository-structure)
-- [🔵 API Endpoints](#-api-endpoints)
-  - [Instructors](#instructors)
-  - [Courses](#courses)
-  - [Customers](#customers)
-- [⚙️ Modules](#-modules)
-- [🚀 Getting Started](#-getting-started)
+![Project Logo](https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg)
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Repository Structure](#repository-structure)
+- [Modules](#modules)
+- [Getting Started](#getting-started)
   - [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
+## Overview
 
----
+This project, **GROWSKILL-BACKEND**, is designed to handle various functionalities and API endpoints for a learning platform. It provides features for instructors, courses, and customers.
 
-## 🛡️ Roles and Functionalities
+## Features
 
-This GrowSkill Backend project involves the following roles and their respective functionalities:
-
-### Instructor
-
-- **Registration**: Instructors can register for an account by providing their name, email, password, and specialization.
-- **Login**: Authenticated instructors can log in with their email and password to access instructor-specific features.
-- **Logout**: Instructors can log out, which invalidates their access token.
-- **Course Creation**: Instructors can create new courses with course details.
-- **Course Management**: Instructors can manage (update) the details of their courses.
-
-### Course
-
-- **Course Listing**: Courses are available for viewing by all users.
-- **Course Details**: Users can retrieve detailed information about a specific course by providing its unique ID.
-
-### Customer
-
-- **Registration**: Customers can register for an account by providing their name, email, and password.
-- **Login**: Authenticated customers can log in with their email and password to access customer-specific features.
-- **Logout**: Customers can log out, which invalidates their access token.
-
-Each role in the system has distinct functionalities designed to cater to their needs, whether it's creating content (instructors), accessing course details (all users), or managing their accounts (instructors and customers). These roles are essential for managing the learning platform efficiently.
-
-Please follow the specific API endpoints mentioned in the README to utilize these functionalities.
-
-
-## 📍 Overview
-
-Welcome to the GrowSkill Backend repository, an API for an online learning platform. This API provides services for instructors, courses, and customers. Below, you'll find a detailed description of the available API endpoints and how to use them.
-
----
-
-## 📦 Features
-
-This backend offers the following features:
-
-- **Instructors**:
+- **Instructors:**
   - Register a new instructor.
-  - Log in as an instructor.
+  - Instructor login.
   - Log out an instructor.
   - Retrieve current instructor information.
 
-- **Courses**:
+- **Courses:**
   - Retrieve a list of all courses.
   - Create a new course.
-  - Retrieve details of a specific course.
+  - Retrieve details of a specific course by ID.
   - Update course details.
 
-- **Customers**:
+- **Customers:**
   - Register a new customer.
-  - Log in as a customer.
+  - Customer login.
   - Log out a customer.
   - Retrieve current customer information.
 
-Please refer to the API Endpoints section for detailed explanations and usage instructions.
-
----
-
-## 📂 Repository Structure
-
-## 📂 Repository Structure
+## Repository Structure
 
 The project is structured as follows:
 
@@ -108,21 +65,75 @@ growSkill-backend/
 │   ├── customerRoute.js
 │   └── instructorRoute.js
 └── server.js
-```
 
-```
+- `config/`: Contains configurations, such as database connection settings.
+- `controllers/`: Includes controllers responsible for handling various API endpoints and business logic.
+- `middleware/`: Contains middleware functions, including error handling and token validation.
+- `models/`: Defines the data models for courses, customers, and instructors.
+- `routes/`: Defines the API routes and connects them to the appropriate controllers.
+- `package-lock.json`: Auto-generated file specifying dependency versions.
+- `package.json`: Contains project metadata and dependencies.
+- `constants.js`: File for defining constants used throughout the project.
+- `server.js`: The entry point of the application
 
-config/: Contains configurations, such as database connection settings.
-controllers/: Includes controllers responsible for handling various API endpoints and business logic.
-middleware/: Contains middleware functions, including error handling and token validation.
-models/: Defines the data models for courses, customers, and instructors.
-routes/: Defines the API routes and connects them to the appropriate controllers.
-package-lock.json: Auto-generated file specifying dependency versions.
-package.json: Contains project metadata and dependencies.
-constants.js: File for defining constants used throughout the project.
-server.js: The entry point of the application
 
----
+<details closed><summary>Root</summary>
+
+| File                                                                                                | Summary                   |
+| ---                                                                                                 | ---                       |
+| [package-lock.json](https://github.com/lalit-commits/growSkill-backend/blob/main/package-lock.json) | Auto-generated file specifying dependency versions |
+| [server.js](https://github.com/lalit-commits/growSkill-backend/blob/main/server.js)                 | The entry point of the application |
+| [package.json](https://github.com/lalit-commits/growSkill-backend/blob/main/package.json)           | Contains project metadata and dependencies |
+| [constants.js](https://github.com/lalit-commits/growSkill-backend/blob/main/constants.js)           | File for defining constants used throughout the project |
+
+</details>
+
+<details closed><summary>Models</summary>
+
+| File                                                                                                         | Summary                   |
+| ---                                                                                                          | ---                       |
+| [courseModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/courseModel.js)         | Defines the data model for courses |
+| [customerModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/customerModel.js)     | Defines the data model for customers |
+| [instructorModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/instructorModel.js) | Defines the data model for instructors |
+
+</details>
+
+<details closed><summary>Config</summary>
+
+| File                                                                                                   | Summary                   |
+| ---                                                                                                    | ---                       |
+| [dbConnection.js](https://github.com/lalit-commits/growSkill-backend/blob/main/config/dbConnection.js) | Contains configurations, such as database connection settings |
+
+</details>
+
+<details closed><summary>Controllers</summary>
+
+| File                                                                                                                        | Summary                   |
+| ---                                                                                                                         | ---                       |
+| [courseController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/courseController.js)         | Controller responsible for handling course-related API endpoints |
+| [customerController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/customerController.js)     | Controller responsible for handling customer-related API endpoints |
+| [instructorController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/instructorController.js) | Controller responsible for handling instructor-related API endpoints |
+
+</details>
+
+<details closed><summary>Middleware</summary>
+
+| File                                                                                                                       | Summary                   |
+| ---                                                                                                                        | ---                       |
+| [errorHandler.js](https://github.com/lalit-commits/growSkill-backend/blob/main/middleware/errorHandler.js)                 | Middleware function for error handling |
+| [validateTokenHandler.js](https://github.com/lalit-commits/growSkill-backend/blob/main/middleware/validateTokenHandler.js) | Middleware function for token validation |
+
+</details>
+
+<details closed><summary>Routes</summary>
+
+| File                                                                                                         | Summary                   |
+| ---                                                                                                          | ---                       |
+| [courseRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/courseRoute.js)         | Defines API routes and connects them to course-related controllers |
+| [instructorRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/instructorRoute.js) | Defines API routes and connects them to instructor-related controllers |
+| [customerRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/customerRoute.js)     | Defines API routes and connects them to customer-related controllers |
+
+</details>
 
 ## 🔵 API Endpoints
 
@@ -183,27 +194,43 @@ server.js: The entry point of the application
 Please follow the usage instructions and provide the required information when making requests to these endpoints.
 
 
-
 ## 🚀 Getting Started
 
-Get started with project by following these steps:
+To get started with the project, follow these steps:
 
 ### Installation
 
-1. Clone the growSkill-backend repository:
+1. Clone the `growSkill-backend` repository:
+
    ```sh
    git clone https://github.com/lalit-commits/growSkill-backend
+Navigate to the project directory:
 
-
-2. Change to the project directory:
-   ```sh
-   cd growSkill-backend
-
-
-3.Install the required dependencies:
 ```sh
-npm install
 
+cd growSkill-backend
+Install the required dependencies:
+
+```sh
+
+npm install
+Now you have the project and its dependencies installed.
+
+### Running the Project
+To run the project, execute the following command:
+
+```sh
+
+npm start
+The server will start and be accessible at http://localhost:5000.
+
+Testing
+To run tests for the project, use the following command:
+
+```sh
+
+### npm test
+This will execute the test suite for your application.
 
 
 
