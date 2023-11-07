@@ -15,10 +15,7 @@
 - [⚙️ Modules](#-modules)
 - [🚀 Getting Started](#-getting-started)
   - [Installation](#installation)
-- [🛣 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [👏 Acknowledgments](#-acknowledgments)
+
 
 ---
 
