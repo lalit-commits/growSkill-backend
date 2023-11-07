@@ -5,13 +5,9 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Repository Structure](#repository-structure)
-- [Modules](#modules)
+- [API Endpoints](#api-endpoints)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -135,6 +131,7 @@ growSkill-backend/
   - **Usage**: Fetch information about the currently authenticated customer using the access token.
 
 Please follow the usage instructions and provide the required information when making requests to these endpoints.
+
 
 
 
