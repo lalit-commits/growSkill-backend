@@ -1,6 +1,5 @@
 # GROWSKILL-BACKEND
 
-![Project Logo](https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -65,6 +64,7 @@ growSkill-backend/
 │   ├── customerRoute.js
 │   └── instructorRoute.js
 └── server.js
+```
 
 - `config/`: Contains configurations, such as database connection settings.
 - `controllers/`: Includes controllers responsible for handling various API endpoints and business logic.
@@ -76,64 +76,7 @@ growSkill-backend/
 - `constants.js`: File for defining constants used throughout the project.
 - `server.js`: The entry point of the application
 
-
-<details closed><summary>Root</summary>
-
-| File                                                                                                | Summary                   |
-| ---                                                                                                 | ---                       |
-| [package-lock.json](https://github.com/lalit-commits/growSkill-backend/blob/main/package-lock.json) | Auto-generated file specifying dependency versions |
-| [server.js](https://github.com/lalit-commits/growSkill-backend/blob/main/server.js)                 | The entry point of the application |
-| [package.json](https://github.com/lalit-commits/growSkill-backend/blob/main/package.json)           | Contains project metadata and dependencies |
-| [constants.js](https://github.com/lalit-commits/growSkill-backend/blob/main/constants.js)           | File for defining constants used throughout the project |
-
-</details>
-
-<details closed><summary>Models</summary>
-
-| File                                                                                                         | Summary                   |
-| ---                                                                                                          | ---                       |
-| [courseModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/courseModel.js)         | Defines the data model for courses |
-| [customerModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/customerModel.js)     | Defines the data model for customers |
-| [instructorModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/instructorModel.js) | Defines the data model for instructors |
-
-</details>
-
-<details closed><summary>Config</summary>
-
-| File                                                                                                   | Summary                   |
-| ---                                                                                                    | ---                       |
-| [dbConnection.js](https://github.com/lalit-commits/growSkill-backend/blob/main/config/dbConnection.js) | Contains configurations, such as database connection settings |
-
-</details>
-
-<details closed><summary>Controllers</summary>
-
-| File                                                                                                                        | Summary                   |
-| ---                                                                                                                         | ---                       |
-| [courseController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/courseController.js)         | Controller responsible for handling course-related API endpoints |
-| [customerController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/customerController.js)     | Controller responsible for handling customer-related API endpoints |
-| [instructorController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/instructorController.js) | Controller responsible for handling instructor-related API endpoints |
-
-</details>
-
-<details closed><summary>Middleware</summary>
-
-| File                                                                                                                       | Summary                   |
-| ---                                                                                                                        | ---                       |
-| [errorHandler.js](https://github.com/lalit-commits/growSkill-backend/blob/main/middleware/errorHandler.js)                 | Middleware function for error handling |
-| [validateTokenHandler.js](https://github.com/lalit-commits/growSkill-backend/blob/main/middleware/validateTokenHandler.js) | Middleware function for token validation |
-
-</details>
-
-<details closed><summary>Routes</summary>
-
-| File                                                                                                         | Summary                   |
-| ---                                                                                                          | ---                       |
-| [courseRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/courseRoute.js)         | Defines API routes and connects them to course-related controllers |
-| [instructorRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/instructorRoute.js) | Defines API routes and connects them to instructor-related controllers |
-| [customerRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/customerRoute.js)     | Defines API routes and connects them to customer-related controllers |
-
-</details>
+---
 
 ## 🔵 API Endpoints
 
@@ -194,43 +137,8 @@ growSkill-backend/
 Please follow the usage instructions and provide the required information when making requests to these endpoints.
 
 
-## 🚀 Getting Started
 
-To get started with the project, follow these steps:
 
-### Installation
-
-1. Clone the `growSkill-backend` repository:
-
-   ```sh
-   git clone https://github.com/lalit-commits/growSkill-backend
-Navigate to the project directory:
-
-```sh
-
-cd growSkill-backend
-Install the required dependencies:
-
-```sh
-
-npm install
-Now you have the project and its dependencies installed.
-
-### Running the Project
-To run the project, execute the following command:
-
-```sh
-
-npm start
-The server will start and be accessible at http://localhost:5000.
-
-Testing
-To run tests for the project, use the following command:
-
-```sh
-
-### npm test
-This will execute the test suite for your application.
 
 
 
