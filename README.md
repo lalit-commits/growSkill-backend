@@ -1,174 +1,134 @@
-<div align="center">
-<h1 align="center">
-<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" />
-<br>GROWSKILL-BACKEND</h1>
-<h3>◦ HTTPStatus Exception: 429</h3>
-<h3>◦ Developed with the software and tools below.</h3>
-
-<p align="center">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat-square&logo=JavaScript&logoColor=black" alt="JavaScript" />
-<img src="https://img.shields.io/badge/Nodemon-76D04B.svg?style=flat-square&logo=Nodemon&logoColor=white" alt="Nodemon" />
-<img src="https://img.shields.io/badge/Express-000000.svg?style=flat-square&logo=Express&logoColor=white" alt="Express" />
-<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat-square&logo=JSON&logoColor=white" alt="JSON" />
-</p>
-<img src="https://img.shields.io/github/license/lalit-commits/growSkill-backend?style=flat-square&color=5D6D7E" alt="GitHub license" />
-<img src="https://img.shields.io/github/last-commit/lalit-commits/growSkill-backend?style=flat-square&color=5D6D7E" alt="git-last-commit" />
-<img src="https://img.shields.io/github/commit-activity/m/lalit-commits/growSkill-backend?style=flat-square&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/languages/top/lalit-commits/growSkill-backend?style=flat-square&color=5D6D7E" alt="GitHub top language" />
-</div>
-
----
-
-## 📖 Table of Contents
-- [📖 Table of Contents](#-table-of-contents)
-- [📍 Overview](#-overview)
-- [📦 Features](#-features)
-- [📂 repository Structure](#-repository-structure)
-- [⚙️ Modules](#modules)
-- [🚀 Getting Started](#-getting-started)
-    - [🔧 Installation](#-installation)
-    - [🤖 Running growSkill-backend](#-running-growSkill-backend)
-    - [🧪 Tests](#-tests)
-- [🛣 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [👏 Acknowledgments](#-acknowledgments)
-
----
-
-
 ## 📍 Overview
 
-HTTPStatus Exception: 429
+Welcome to the GrowSkill Backend repository, an API for an online learning platform. This API provides services for instructors, courses, and customers. Below, you'll find a detailed description of the available API endpoints and how to use them.
 
 ---
 
 ## 📦 Features
 
-HTTPStatus Exception: 429
+This backend offers the following features:
+
+- **Instructors**:
+  - Register a new instructor.
+  - Log in as an instructor.
+  - Log out an instructor.
+  - Retrieve current instructor information.
+
+- **Courses**:
+  - Retrieve a list of all courses.
+  - Create a new course.
+  - Retrieve details of a specific course.
+  - Update course details.
+
+- **Customers**:
+  - Register a new customer.
+  - Log in as a customer.
+  - Log out a customer.
+  - Retrieve current customer information.
+
+Please refer to the API Endpoints section for detailed explanations and usage instructions.
 
 ---
-
 
 ## 📂 Repository Structure
 
-```sh
-└── growSkill-backend/
-    ├── config/
-    │   └── dbConnection.js
-    ├── constants.js
-    ├── controllers/
-    │   ├── courseController.js
-    │   ├── customerController.js
-    │   └── instructorController.js
-    ├── middleware/
-    │   ├── errorHandler.js
-    │   └── validateTokenHandler.js
-    ├── models/
-    │   ├── courseModel.js
-    │   ├── customerModel.js
-    │   └── instructorModel.js
-    ├── package-lock.json
-    ├── package.json
-    ├── routes/
-    │   ├── courseRoute.js
-    │   ├── customerRoute.js
-    │   └── instructorRoute.js
-    └── server.js
+The repository structure includes the following:
 
-```
+└── growSkill-backend/
+├── config/
+├── constants.js
+├── controllers/
+├── middleware/
+├── models/
+├── routes/
+├── server.js
+
+
 
 ---
 
+## 🔵 API Endpoints
+
+### Instructors
+
+- `POST /v1/instructor/registerInstructor`
+  - **Description**: Register a new instructor.
+  - **Usage**: Use this endpoint to create a new instructor account. Provide the instructor's name, email, password, and specialization.
+
+- `POST /v1/instructor/loginInstructor`
+  - **Description**: Instructor login.
+  - **Usage**: Log in as an instructor. Provide the instructor's email and password to authenticate and receive an access token for protected routes.
+
+- `POST /v1/instructor/logoutInstructor`
+  - **Description**: Log out an instructor.
+  - **Usage**: Log out the currently authenticated instructor, which invalidates their access token.
+
+- `GET /v1/instructor/currentInstructor`
+  - **Description**: Retrieve current instructor information.
+  - **Usage**: Fetch information about the currently authenticated instructor using the access token.
+
+### Courses
+
+- `GET /v1/courses`
+  - **Description**: Retrieve a list of all courses.
+  - **Usage**: Get a list of all available courses.
+
+- `POST /v1/courses`
+  - **Description**: Create a new course.
+  - **Usage**: Add a new course to the platform by providing course details.
+
+- `GET /v1/courses/:id`
+  - **Description**: Retrieve details of a specific course by ID.
+  - **Usage**: View detailed information about a specific course based on its unique ID.
+
+- `PUT /v1/courses/:id`
+  - **Description**: Update course details.
+  - **Usage**: Modify the details of a specific course, typically for instructors to update their course content.
+
+### Customers
+
+- `POST /v1/customer/registerCustomer`
+  - **Description**: Register a new customer.
+  - **Usage**: Create a new customer account. Provide the customer's name, email, and password.
+
+- `POST /v1/customer/loginCustomer`
+  - **Description**: Customer login.
+  - **Usage**: Log in as a customer. Provide the customer's email and password to authenticate and receive an access token for protected routes.
+
+- `POST /v1/customer/logoutCustomer`
+  - **Description**: Log out a customer.
+  - **Usage**: Log out the currently authenticated customer, which invalidates their access token.
+
+- `GET /v1/customer/currentCustomer`
+  - **Description**: Retrieve current customer information.
+  - **Usage**: Fetch information about the currently authenticated customer using the access token.
+
+Please follow the usage instructions and provide the required information when making requests to these endpoints.
+
+---
 
 ## ⚙️ Modules
 
-<details closed><summary>Root</summary>
-
-| File                                                                                                | Summary                   |
-| ---                                                                                                 | ---                       |
-| [package-lock.json](https://github.com/lalit-commits/growSkill-backend/blob/main/package-lock.json) | HTTPStatus Exception: 429 |
-| [server.js](https://github.com/lalit-commits/growSkill-backend/blob/main/server.js)                 | HTTPStatus Exception: 429 |
-| [package.json](https://github.com/lalit-commits/growSkill-backend/blob/main/package.json)           | HTTPStatus Exception: 429 |
-| [constants.js](https://github.com/lalit-commits/growSkill-backend/blob/main/constants.js)           | HTTPStatus Exception: 429 |
-
-</details>
-
-<details closed><summary>Models</summary>
-
-| File                                                                                                         | Summary                   |
-| ---                                                                                                          | ---                       |
-| [courseModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/courseModel.js)         | HTTPStatus Exception: 429 |
-| [customerModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/customerModel.js)     | HTTPStatus Exception: 429 |
-| [instructorModel.js](https://github.com/lalit-commits/growSkill-backend/blob/main/models/instructorModel.js) | HTTPStatus Exception: 429 |
-
-</details>
-
-<details closed><summary>Config</summary>
-
-| File                                                                                                   | Summary                   |
-| ---                                                                                                    | ---                       |
-| [dbConnection.js](https://github.com/lalit-commits/growSkill-backend/blob/main/config/dbConnection.js) | HTTPStatus Exception: 429 |
-
-</details>
-
-<details closed><summary>Controllers</summary>
-
-| File                                                                                                                        | Summary                   |
-| ---                                                                                                                         | ---                       |
-| [courseController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/courseController.js)         | HTTPStatus Exception: 429 |
-| [customerController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/customerController.js)     | HTTPStatus Exception: 429 |
-| [instructorController.js](https://github.com/lalit-commits/growSkill-backend/blob/main/controllers/instructorController.js) | HTTPStatus Exception: 429 |
-
-</details>
-
-<details closed><summary>Middleware</summary>
-
-| File                                                                                                                       | Summary                   |
-| ---                                                                                                                        | ---                       |
-| [errorHandler.js](https://github.com/lalit-commits/growSkill-backend/blob/main/middleware/errorHandler.js)                 | HTTPStatus Exception: 429 |
-| [validateTokenHandler.js](https://github.com/lalit-commits/growSkill-backend/blob/main/middleware/validateTokenHandler.js) | HTTPStatus Exception: 429 |
-
-</details>
-
-<details closed><summary>Routes</summary>
-
-| File                                                                                                         | Summary                   |
-| ---                                                                                                          | ---                       |
-| [courseRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/courseRoute.js)         | HTTPStatus Exception: 429 |
-| [instructorRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/instructorRoute.js) | HTTPStatus Exception: 429 |
-| [customerRoute.js](https://github.com/lalit-commits/growSkill-backend/blob/main/routes/customerRoute.js)     | HTTPStatus Exception: 429 |
-
-</details>
+The project's modules are organized into different sections. You can refer to the "Modules" section in your README to get a summary of the files and their purposes.
 
 ---
 
 ## 🚀 Getting Started
 
-***Dependencies***
+Get started with your project by following these steps:
 
-Please ensure you have the following dependencies installed on your system:
-
-`- ℹ️ Dependency 1`
-
-`- ℹ️ Dependency 2`
-
-`- ℹ️ ...`
-
-### 🔧 Installation
+### Installation
 
 1. Clone the growSkill-backend repository:
-```sh
-git clone https://github.com/lalit-commits/growSkill-backend
-```
+   ```sh
+   git clone https://github.com/lalit-commits/growSkill-backend
 
-2. Change to the project directory:
-```sh
+Change to the project directory:
+
 cd growSkill-backend
-```
 
-3. Install the dependencies:
-```sh
+Install the required dependencies:
+
 npm install
-```
+
 
