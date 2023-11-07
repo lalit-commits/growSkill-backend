@@ -1,3 +1,55 @@
+## 📖 Table of Contents
+
+- [📖 Table of Contents](#-table-of-contents)
+- [📍 Overview](#-overview)
+- [📦 Features](#-features)
+- [🛡️ Roles and Functionalities](#-roles-and-functionalities)
+  - [Instructor](#instructor)
+  - [Course](#course)
+  - [Customer](#customer)
+- [📂 Repository Structure](#-repository-structure)
+- [🔵 API Endpoints](#-api-endpoints)
+  - [Instructors](#instructors)
+  - [Courses](#courses)
+  - [Customers](#customers)
+- [⚙️ Modules](#-modules)
+- [🚀 Getting Started](#-getting-started)
+  - [Installation](#installation)
+- [🛣 Roadmap](#-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [👏 Acknowledgments](#-acknowledgments)
+
+---
+
+## 🛡️ Roles and Functionalities
+
+This GrowSkill Backend project involves the following roles and their respective functionalities:
+
+### Instructor
+
+- **Registration**: Instructors can register for an account by providing their name, email, password, and specialization.
+- **Login**: Authenticated instructors can log in with their email and password to access instructor-specific features.
+- **Logout**: Instructors can log out, which invalidates their access token.
+- **Course Creation**: Instructors can create new courses with course details.
+- **Course Management**: Instructors can manage (update) the details of their courses.
+
+### Course
+
+- **Course Listing**: Courses are available for viewing by all users.
+- **Course Details**: Users can retrieve detailed information about a specific course by providing its unique ID.
+
+### Customer
+
+- **Registration**: Customers can register for an account by providing their name, email, and password.
+- **Login**: Authenticated customers can log in with their email and password to access customer-specific features.
+- **Logout**: Customers can log out, which invalidates their access token.
+
+Each role in the system has distinct functionalities designed to cater to their needs, whether it's creating content (instructors), accessing course details (all users), or managing their accounts (instructors and customers). These roles are essential for managing the learning platform efficiently.
+
+Please follow the specific API endpoints mentioned in the README to utilize these functionalities.
+
+
 ## 📍 Overview
 
 Welcome to the GrowSkill Backend repository, an API for an online learning platform. This API provides services for instructors, courses, and customers. Below, you'll find a detailed description of the available API endpoints and how to use them.
@@ -32,18 +84,46 @@ Please refer to the API Endpoints section for detailed explanations and usage in
 
 ## 📂 Repository Structure
 
-The repository structure includes the following:
+## 📂 Repository Structure
 
-└── growSkill-backend/
+The project is structured as follows:
+
+```plaintext
+growSkill-backend/
 ├── config/
+│   └── dbConnection.js
 ├── constants.js
 ├── controllers/
+│   ├── courseController.js
+│   ├── customerController.js
+│   └── instructorController.js
 ├── middleware/
+│   ├── errorHandler.js
+│   └── validateTokenHandler.js
 ├── models/
+│   ├── courseModel.js
+│   ├── customerModel.js
+│   └── instructorModel.js
+├── package-lock.json
+├── package.json
 ├── routes/
-├── server.js
+│   ├── courseRoute.js
+│   ├── customerRoute.js
+│   └── instructorRoute.js
+└── server.js
+```
 
+```
 
+config/: Contains configurations, such as database connection settings.
+controllers/: Includes controllers responsible for handling various API endpoints and business logic.
+middleware/: Contains middleware functions, including error handling and token validation.
+models/: Defines the data models for courses, customers, and instructors.
+routes/: Defines the API routes and connects them to the appropriate controllers.
+package-lock.json: Auto-generated file specifying dependency versions.
+package.json: Contains project metadata and dependencies.
+constants.js: File for defining constants used throughout the project.
+server.js: The entry point of the application
 
 ---
 
@@ -105,17 +185,11 @@ The repository structure includes the following:
 
 Please follow the usage instructions and provide the required information when making requests to these endpoints.
 
----
 
-## ⚙️ Modules
-
-The project's modules are organized into different sections. You can refer to the "Modules" section in your README to get a summary of the files and their purposes.
-
----
 
 ## 🚀 Getting Started
 
-Get started with your project by following these steps:
+Get started with project by following these steps:
 
 ### Installation
 
@@ -123,12 +197,16 @@ Get started with your project by following these steps:
    ```sh
    git clone https://github.com/lalit-commits/growSkill-backend
 
-Change to the project directory:
 
-cd growSkill-backend
+2. Change to the project directory:
+   ```sh
+   cd growSkill-backend
 
-Install the required dependencies:
 
+3.Install the required dependencies:
+```sh
 npm install
+
+
 
 
